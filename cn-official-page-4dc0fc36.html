@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL 专题 · 重逢与深度阅读 | 中文资讯站</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f4f5f8;
+      color: #1e1f2a;
+      line-height: 1.7;
+    }
+    .page-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    /* -------- HERO 深色头图 -------- */
+    .hero {
+      background: linear-gradient(145deg, #0f1422 0%, #1a2137 100%);
+      color: #efefef;
+      padding: 60px 20px 48px;
+      margin: 24px 0 32px;
+      border-radius: 28px;
+      box-shadow: 0 18px 32px -8px rgba(0,0,0,0.35);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 280px; height: 280px;
+      background: radial-gradient(circle, #2a3f6b20 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #ed8b3c, #e6b15e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero .sub {
+      font-size: 1.1rem;
+      opacity: 0.75;
+      max-width: 620px;
+      position: relative;
+      z-index: 2;
+      line-height: 1.6;
+    }
+    .hero .sub a {
+      color: #edb56a;
+      text-decoration: underline 1px dotted #edb56a80;
+      font-weight: 500;
+    }
+    .hero .sub a:hover {
+      color: #fdd48f;
+      text-decoration: underline;
+    }
+    /* -------- 正文区 浅色卡片------ */
+    .content-block {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 36px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.03);
+    }
+    .content-block h2 {
+      font-size: 1.7rem;
+      font-weight: 550;
+      color: #1b2236;
+      border-left: 5px solid #d97c2b;
+      padding-left: 16px;
+      margin-bottom: 20px;
+    }
+    .content-block p {
+      margin-bottom: 18px;
+      text-align: justify;
+      word-break: break-word;
+    }
+    .content-block .inset-link {
+      color: #b85f1d;
+      font-weight: 500;
+      text-decoration: underline 2px #b85f1d30;
+      transition: all 0.15s ease;
+    }
+    .content-block .inset-link:hover {
+      color: #222;
+      text-decoration-color: #b85f1d;
+    }
+    .two-column {
+      display: flex;
+      gap: 32px;
+      margin: 18px 0 8px;
+    }
+    .two-column .col {
+      flex: 1;
+    }
+    .feature-item {
+      background: #f9faff;
+      padding: 18px 20px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+    }
+    .feature-item strong {
+      display: block;
+      font-size: 1.15rem;
+      color: #1f2b42;
+      margin-bottom: 6px;
+    }
+    .feature-item strong::before {
+      content: '▹';
+      color: #d97c2b;
+      margin-right: 8px;
+    }
+    /* -------- 页尾提示 -------- */
+    .footer-note {
+      text-align: center;
+      padding: 20px 16px 40px;
+      border-top: 1px solid #d8dce8;
+      margin-top: 10px;
+      color: #3b415a;
+    }
+    .footer-note .foot-link {
+      display: inline-block;
+      background: #1e263e;
+      color: #eceef4;
+      padding: 8px 22px;
+      border-radius: 60px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+      margin: 0 6px 6px;
+    }
+    .footer-note .foot-link:hover {
+      background: #2c375b;
+      transform: scale(1.02);
+    }
+    .footer-note small {
+      display: block;
+      margin-top: 14px;
+      font-size: 0.9rem;
+      color: #606780;
+    }
+    .footer-note a {
+      color: #b85f1d;
+      text-decoration: underline 1px dotted #b85f1d60;
+    }
+    /* -------- 响应式 -------- */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 2rem; }
+      .hero { padding: 40px 18px 34px; }
+      .content-block { padding: 26px 18px; }
+      .two-column { flex-direction: column; gap: 18px; }
+      .content-block h2 { font-size: 1.4rem; }
+    }
+    @media (max-width: 440px) {
+      .page-wrap { padding: 0 12px; }
+      .hero h1 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+  
+  <!-- HERO 深色头图 -->
+  <header class="hero">
+    <h1>再探 <em>NFL</em> · 不止于赛场</h1>
+    <div class="sub">
+      从竞技到文化，每个赛季都值得重新理解。这里是中文世界持续更新的 <a href="https://cn-official-nfl.com">nfl</a> 资讯站，收藏即重逢。
+    </div>
+  </header>
+
+  <!-- 背景说明 + 第一段 -->
+  <section class="content-block">
+    <h2>不止一场比赛</h2>
+    <p>对于许多关注北美运动的朋友来说，<strong>NFL</strong> 早已超越了“周末球赛”的范畴。从战术板的博弈到球员训练周期的更迭，从选秀夜的期望到超级碗的全民叙事——联盟每年都在书写不同的章节。正因如此，一个准确、平实的中文信息入口显得格外珍贵。无论你是刚接触规则的新读者，还是追随多年的老球迷，反复回到同一个地方刷新认知，本身就是一种深度参与。</p>
+    <p>本站点的出发点很简单：让对 <strong>NFL</strong> 感兴趣的人，可以随时回来阅读赛季解读、规则演变以及那些数字背后的故事。不必每次都重新搜索，不必忍受碎片化轰炸，只需要一个稳定的角落。<a href="https://cn-official-nfl.com" class="inset-link">nfl</a> 这个简洁的域名，也正是为了“再次访问”而生。</p>
+  </section>
+
+  <!-- 三段自然介绍：采用双列卡片 + 段落 -->
+  <section class="content-block">
+    <div class="two-column">
+      <div class="col">
+        <div class="feature-item">
+          <strong>赛季纵深</strong>
+          <p>从季前训练营到季后赛鏖战，每轮对局都暗含变数。我们不追逐突发流言，而是梳理真实赛程、关键伤病影响以及分区竞争格局，帮你建立清晰的赛季地图。</p>
+        </div>
+        <div class="feature-item">
+          <strong>规则与人文</strong>
+          <p>防守干扰接球、加时赛新规、工资帽运作……规则迭代背后是联盟对公平与观赏性的平衡。同时，球员社区的公益项目与城市联结，也让 <strong>NFL</strong> 不只是竞技。</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="feature-item">
+          <strong>数据与档案</strong>
+          <p>数字不会说谎。我们提供历代战绩、传球码数、擒杀榜等客观档案，不堆砌术语，只做清晰整理。适合赛前预习，也适合赛后复盘。</p>
+        </div>
+        <div class="feature-item">
+          <strong>阅读节奏</strong>
+          <p>每篇文章都经过重新组织，不复制粘贴机器翻译。长文分段，短评精炼，你可以从任何一页开始，或随时回到首页重新浏览。</p>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 10px;">以上四个维度，构成了本站内容的核心骨架。它们围绕同一个枢纽：<a href="https://cn-official-nfl.com" class="inset-link">nfl</a>，一个你可以记住并反复打开的入口。</p>
+  </section>
+
+  <!-- 第三段：从“持续关注”的角度展开 -->
+  <section class="content-block" style="background: #fdfdff;">
+    <h2>收藏，是为了再次打开</h2>
+    <p>信息过载的时代，我们反而更需要刻意选择“反复访问的地点”。把 <strong>NFL</strong> 中文站加入书签，不是出于冲动，而是因为知道这里内容会更新、解读会沉淀。赛季间歇期，你可以翻看选秀报告或历史特辑；赛季进行时，每轮战报与数据汇总都在首页等候。</p>
+    <p>我们已经整理了不少专题：<strong>NFL</strong> 历史上最著名的逆转、分区内战恩怨录、新一代四分卫成长轨迹……这些内容不会一次全部塞给你，而是按节奏逐步呈现。如果你上次来访是几个月前，现在的页面可能已经完全不同。<a href="https://cn-official-nfl.com" class="inset-link">nfl</a> 始终保持新鲜，却保留了熟悉的入口。</p>
+    <p style="margin-top: 8px;">不要小看“再次访问”的力量。同一篇文章在赛季不同阶段读来，感受往往截然不同。这正是我们持续更新、也邀请你持续回来的理由。</p>
+  </section>
+
+  <!-- 页尾访问提示 -->
+  <footer class="footer-note">
+    <div>
+      <a href="https://cn-official-nfl.com" class="foot-link">nfl</a>
+    </div>
+    <p style="margin: 10px 0 6px;">记录、理解、重温 — 这是属于你的 <strong>NFL</strong> 阅读坐标。</p>
+    <small>页面内容持续完善 · 下次回来也许又有新篇 <br> <a href="https://cn-official-nfl.com">nfl</a> 欢迎常来</small>
+  </footer>
+</div>
+</body>
+</html>
